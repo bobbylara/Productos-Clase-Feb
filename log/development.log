@@ -23,3 +23,86 @@ Migrating to CreateProductos (20100128234730)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("productos")[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:00:17) [GET]
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/productos
+Rendering productos/index
+Completed in 150ms (View: 138, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:06:54) [GET]
+  [4;35;1mProducto Load (0.4ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 26ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-01-28 18:07:04) [GET]
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 34ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/productos/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:07:09) [GET]
+  [4;36;1mProducto Load (0.4ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:11:06) [GET]
+  [4;35;1mProducto Load (0.7ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:12:14) [GET]
+  [4;36;1mProducto Load (0.4ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:12:26) [GET]
+  [4;35;1mProducto Load (0.4ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:12:39) [GET]
+  [4;36;1mProducto Load (0.4ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:13:26) [GET]
+  [4;35;1mProducto Load (0.4ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:13:31) [GET]
+  [4;36;1mProducto Load (0.4ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:13:39) [GET]
+  [4;35;1mProducto Load (0.4ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:13:41) [GET]
+  [4;36;1mProducto Load (0.4ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]

@@ -1,4 +1,12 @@
-body { background-color: #fff; color: #333; }
+body { background-color: darkblue; color: #333; }
+
+
+#contenido{
+	background-color: #fff;
+	border: 1px solid #999;
+	margin: auto;
+}
+
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
