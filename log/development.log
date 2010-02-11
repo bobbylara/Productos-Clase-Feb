@@ -106,3 +106,2530 @@ Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:13:41) [GET
 Rendering template within layouts/application
 Rendering productos/index
 Completed in 14ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProductos (20100128234730)
+Migrating to CreateUsers (20100129004525)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "name" varchar(100) DEFAULT '', "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100129004525')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("productos")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:47:55) [GET]
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 60ms (View: 47, DB: 1) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 18:47:58) [GET]
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/productos]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-28 18:48:01) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-01-28 18:48:08) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 46ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/signup]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:05:47) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 165ms (View: 151, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:06:28) [GET]
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 63ms (View: 51, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:07:01) [GET]
+  [4;36;1mProducto Load (0.6ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 62ms (View: 50, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:07:34) [GET]
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 20ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-01-28 20:07:36) [GET]
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 50ms (View: 37, DB: 0) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#create (for 127.0.0.1 at 2010-01-28 20:07:43) [POST]
+  Parameters: {"commit"=>"Create", "producto"=>{"nombre"=>"ejemplo", "descripcion"=>"djdje", "precio"=>"33"}, "authenticity_token"=>"ttTJtqzZ9TMspbeLsjgiBs5r/nkoTdRTtQIcAvy7ets="}
+  [4;36;1mProducto Create (27.3ms)[0m   [0;1mINSERT INTO "productos" ("created_at", "nombre", "updated_at", "precio", "descripcion") VALUES('2010-01-29 02:07:43', 'ejemplo', '2010-01-29 02:07:43', 33.0, 'djdje')[0m
+Redirected to http://localhost:3000/productos/1
+Completed in 53ms (DB: 27) | 302 Found [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-01-28 20:07:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 34ms (View: 18, DB: 0) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:07:46) [GET]
+  [4;36;1mProducto Load (0.8ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-01-28 20:07:54) [GET]
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:07:54) [GET]
+  [4;35;1mProducto Load (0.8ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-01-28 20:07:57) [GET]
+  [4;36;1mProducto Load (0.8ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:10:12) [GET]
+  [4;36;1mProducto Load (1.7ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 227ms (View: 212, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:10:20) [GET]
+  [4;35;1mProducto Load (0.8ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:10:21) [GET]
+  [4;36;1mProducto Load (0.8ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-02 17:10:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 112ms (View: 97, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:10:39) [GET]
+  [4;36;1mProducto Load (0.8ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 123ms (View: 110, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-02 17:10:41) [GET]
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 38ms (View: 25, DB: 0) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#create (for 127.0.0.1 at 2010-02-02 17:10:58) [POST]
+  Parameters: {"commit"=>"Create", "producto"=>{"nombre"=>"Colchon", "descripcion"=>"Es un colchon muy grande y suave.", "precio"=>"1000"}, "authenticity_token"=>"dwkQb0DSO0AhDO981/w+ofO6mYKdPpS4t/SjOePdT1E="}
+  [4;35;1mProducto Create (69.2ms)[0m   [0mINSERT INTO "productos" ("created_at", "nombre", "updated_at", "precio", "descripcion") VALUES('2010-02-02 23:10:58', 'Colchon', '2010-02-02 23:10:58', 1000.0, 'Es un colchon muy grande y suave.')[0m
+Redirected to http://localhost:3000/productos/2
+Completed in 91ms (DB: 69) | 302 Found [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-02 17:10:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.6ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-02 17:11:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:11:02) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 132ms (View: 25, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-02 17:11:21) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-02 17:11:29) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 51ms (View: 30, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-02 17:11:37) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"dwkQb0DSO0AhDO981/w+ofO6mYKdPpS4t/SjOePdT1E=", "user"=>{"password_confirmation"=>"ismael", "password"=>"ismael", "login"=>"igmarin", "email"=>"ismael.marin@gmail.com"}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ismael.marin@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES('', 'e3f464ab2d41bd5ef654c88e4714266cf74c2f1b', '2010-02-02 23:11:37', 'b1dab227b869aba8589f56ed175588863f01b8cf', NULL, '2010-02-02 23:11:37', NULL, 'igmarin', 'ismael.marin@gmail.com')[0m
+Redirected to http://localhost:3000/
+Completed in 34ms (DB: 2) | 302 Found [http://localhost/users]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:11:37) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 133ms (View: 120, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:11:39) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-02 17:11:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 17:11:49) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"dwkQb0DSO0AhDO981/w+ofO6mYKdPpS4t/SjOePdT1E=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 110ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:11:49) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:11:54) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:12:12) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-02 17:12:30) [GET]
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:12:30) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 39ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-02 17:12:38) [GET]
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:12:39) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 39ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-02 17:12:39) [GET]
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:12:39) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:12:42) [GET]
+  [4;35;1mProducto Load (0.9ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 37ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:13:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:18:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:23:33) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:28:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:32:22) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 137ms (View: 119, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-02 17:33:07) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 36ms (View: 16, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-02 17:33:21) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"5Bxfa3pXURxVQVIsWjK7JuYUC7XaL/CSifQ9f30rtB4=", "user"=>{"password_confirmation"=>"ismael", "password"=>"ismael", "login"=>"yonosoyigmarin", "email"=>"otro@mail.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'yonosoyigmarin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'otro@mail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES('', '776bb26549874432c48cb555d569677b20f4e7a5', '2010-02-02 23:33:21', '820c3a3049ee5e5e9cb52df591cd89f19cc19bdd', NULL, '2010-02-02 23:33:21', NULL, 'yonosoyigmarin', 'otro@mail.com')[0m
+Redirected to http://localhost:3000/
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:33:21) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:33:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:33:31) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 32ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:35:35) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 39ms (View: 21, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:36:51) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 131ms (View: 21, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:38:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 17:39:42) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-02 17:41:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Completed in 70ms (View: 56, DB: 1) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:41:14) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 40ms (View: 21, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 17:41:17) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, index, new, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:41:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template users/edit.erb in view path app/views):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 17:41:32) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, index, new, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:41:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template users/edit.erb in view path app/views):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:42:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 36ms (View: 14, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:43:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:43:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 46ms (View: 24, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:45:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 46ms (View: 24, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:45:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 46ms (View: 24, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:45:53) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 33ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:46:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 38ms (View: 16, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-02 17:46:18) [POST]
+  Parameters: {"commit"=>"Actualizar", "authenticity_token"=>"5Bxfa3pXURxVQVIsWjK7JuYUC7XaL/CSifQ9f30rtB4=", "user"=>{"password_confirmation"=>"ismael", "password"=>"ismael", "login"=>"yo", "email"=>"ismael.marin@gmail.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'yo') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ismael.marin@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 50ms (View: 21, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-02 17:46:40) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"5Bxfa3pXURxVQVIsWjK7JuYUC7XaL/CSifQ9f30rtB4=", "user"=>{"password_confirmation"=>"ismael", "password"=>"ismael", "login"=>"yoo", "email"=>"ismael.marin@gmail.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'yoo') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ismael.marin@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 139ms (View: 17, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:48:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:50:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 46ms (View: 24, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:53:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 17:55:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 49ms (View: 26, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-02 17:56:01) [PUT]
+  Parameters: {"commit"=>"Actualizar", "authenticity_token"=>"5Bxfa3pXURxVQVIsWjK7JuYUC7XaL/CSifQ9f30rtB4=", "id"=>"1", "user"=>{"password_confirmation"=>"IGMC180581", "password"=>"IGMC180581", "login"=>"igmarin", "email"=>"ismael.marin@gmail.com"}}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'igmarin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ismael.marin@gmail.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-02 23:56:01', "crypted_password" = '8c0f57addf332d1dcaffc13387642db2ee78244b' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users
+Completed in 37ms (DB: 2) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:56:01) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 33ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 17:56:11) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 33ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 17:58:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 18:01:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 131ms (View: 109, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 18:01:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 33ms (View: 11, DB: 1) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 18:01:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 32ms (View: 10, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 18:01:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 41ms (View: 18, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-02 18:01:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 139ms (View: 18, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:03:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:08:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:10:57) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 52ms (View: 33, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-02-02 18:11:17) [DELETE]
+  Parameters: {"authenticity_token"=>"5Bxfa3pXURxVQVIsWjK7JuYUC7XaL/CSifQ9f30rtB4=", "id"=>"2"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Destroy (0.7ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/users
+Completed in 26ms (DB: 1) | 302 Found [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:11:17) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 135ms (View: 116, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:13:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:15:25) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 46ms (View: 27, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:16:33) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 56ms (View: 37, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:16:34) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 132ms (View: 20, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:16:38) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 38ms (View: 20, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:16:40) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:17:27) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 47ms (View: 34, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:17:32) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 135ms (View: 20, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:18:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:18:39) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 28, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-02 18:18:49) [GET]
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:18:49) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:18:51) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:22:58) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 43ms (View: 30, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:23:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:27:41) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 44ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-02 18:27:46) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 18:27:50) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cLsSB6fFRPPDplyhelLEexjYxRuXLujsCLJc9tkJwo0=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Failed login for 'igmarin' from 127.0.0.1 at Wed Feb 03 00:27:50 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 33ms (View: 6, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 18:27:54) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cLsSB6fFRPPDplyhelLEexjYxRuXLujsCLJc9tkJwo0=", "login"=>"igmarin", "password"=>"igmc180581"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Failed login for 'igmarin' from 127.0.0.1 at Wed Feb 03 00:27:54 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 36ms (View: 7, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 18:28:01) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cLsSB6fFRPPDplyhelLEexjYxRuXLujsCLJc9tkJwo0=", "login"=>"igmarin", "password"=>"igmc180581"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Failed login for 'igmarin' from 127.0.0.1 at Wed Feb 03 00:28:01 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 33ms (View: 6, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 18:28:04) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cLsSB6fFRPPDplyhelLEexjYxRuXLujsCLJc9tkJwo0=", "login"=>"igmarin", "password"=>"igmc180581"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Failed login for 'igmarin' from 127.0.0.1 at Wed Feb 03 00:28:04 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 33ms (View: 6, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:28:09) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 35ms (View: 16, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-02-02 18:28:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 44ms (View: 22, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-02-02 18:28:18) [PUT]
+  Parameters: {"commit"=>"Actualizar", "authenticity_token"=>"cLsSB6fFRPPDplyhelLEexjYxRuXLujsCLJc9tkJwo0=", "id"=>"1", "user"=>{"password_confirmation"=>"ismael", "password"=>"ismael", "login"=>"igmarin", "email"=>"ismael.marin@gmail.com"}}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'igmarin' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ismael.marin@gmail.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-03 00:28:18', "crypted_password" = 'b1dab227b869aba8589f56ed175588863f01b8cf' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users
+Completed in 39ms (DB: 1) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-02-02 18:28:18) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 38ms (View: 16, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-02 18:28:22) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 18:28:28) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cLsSB6fFRPPDplyhelLEexjYxRuXLujsCLJc9tkJwo0=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:28:28) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 70ms (View: 55, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:28:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:28:43) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 148ms (View: 135, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-02 18:28:44) [GET]
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:28:44) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:28:46) [GET]
+  [4;35;1mProducto Load (0.9ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 35ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-02 18:28:47) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-02 18:28:52) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"nPTEnIfTPaQ/ArxL1RpeMuhPHqUeuKlbsJG6kDF8VQM=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 34ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:28:52) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 60ms (View: 45, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:28:55) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 55ms (View: 41, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:32:28) [GET]
+  [4;35;1mProducto Load (0.9ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 166ms (View: 152, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-02 18:32:31) [GET]
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:32:31) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-02 18:32:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:32:38) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-02 18:32:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:32:42) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:33:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:38:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:43:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-02 18:47:47) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:48:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:53:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-02 18:58:30) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:15:22) [GET]
+  [4;36;1mProducto Load (1.9ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 202ms (View: 187, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:15:41) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-04 17:15:47) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"9DsKZt9IMdhqlB/sOZ6eORowC3FZBR2qYqEQSOj/fQI=", "login"=>"igmarin", "password"=>"igmc180581"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Failed login for 'igmarin' from 127.0.0.1 at Thu Feb 04 23:15:47 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 69ms (View: 6, DB: 2) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-04 17:15:50) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"9DsKZt9IMdhqlB/sOZ6eORowC3FZBR2qYqEQSOj/fQI=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:15:50) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 147ms (View: 133, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-04 17:16:00) [GET]
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:16:00) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:18:49) [GET]
+  [4;36;1mProducto Load (0.9ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:19:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 104ms (View: 89, DB: 0) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:19:26) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 115ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:19:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 22ms (View: 6, DB: 1) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:19:28) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:19:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:19:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Completed in 38ms (View: 24, DB: 0) | 200 OK [http://localhost/productos/2/edit]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:19:36) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-04 17:19:46) [GET]
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 128ms (View: 114, DB: 0) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:19:58) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-04 17:20:00) [GET]
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:20:11) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:20:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:20:45) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:20:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/productos/2/edit]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-04 17:20:56) [GET]
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:20:58) [GET]
+  [4;35;1mProducto Load (0.9ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:22:35) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/productos]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:22:35) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-04 17:22:44) [GET]
+
+ActionController::RoutingError (No route matches "/products/new" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-04 17:22:48) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/productos/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:22:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:22:56) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/productos/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:22:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:23:04) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/productos/1/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:23:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:23:06) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:23:06) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:25:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:25:25) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 105ms (View: 99, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:25:31) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/PRODUCTos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:25:34) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:25:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:25:42) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/productos/1/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:25:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:29:37) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-04 17:29:51) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-04 17:29:56) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lhHwmvqrRDmaD6ncC0wuDTrOU+ZUx2CHUA/ao4BqIAM=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Redirected to http://localhost:3000/productos/1/edit
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:29:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Completed in 48ms (View: 16, DB: 1) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:30:01) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 42, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-04 17:30:02) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 45ms (View: 14, DB: 1) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#create (for 127.0.0.1 at 2010-02-04 17:30:06) [POST]
+  Parameters: {"commit"=>"Create", "producto"=>{"nombre"=>"", "descripcion"=>"", "precio"=>""}, "authenticity_token"=>"lhHwmvqrRDmaD6ncC0wuDTrOU+ZUx2CHUA/ao4BqIAM="}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mProducto Create (0.5ms)[0m   [0mINSERT INTO "productos" ("created_at", "nombre", "updated_at", "precio", "descripcion") VALUES('2010-02-04 23:30:06', '', '2010-02-04 23:30:06', NULL, '')[0m
+Redirected to http://localhost:3000/productos/3
+Completed in 39ms (DB: 1) | 302 Found [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-04 17:30:06) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 42ms (View: 26, DB: 1) | 200 OK [http://localhost/productos/3]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:30:09) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 62ms (View: 48, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#destroy (for 127.0.0.1 at 2010-02-04 17:30:16) [DELETE]
+  Parameters: {"authenticity_token"=>"lhHwmvqrRDmaD6ncC0wuDTrOU+ZUx2CHUA/ao4BqIAM=", "id"=>"3"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 3) [0m
+  [4;36;1mProducto Destroy (0.3ms)[0m   [0;1mDELETE FROM "productos" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/productos
+Completed in 35ms (DB: 1) | 302 Found [http://localhost/productos/3]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:30:16) [GET]
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 42, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:39:45) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 42, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2010-02-04 17:39:46) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 46ms (View: 14, DB: 1) | 200 OK [http://localhost/productos/new]
+
+
+Processing ProductosController#create (for 127.0.0.1 at 2010-02-04 17:39:49) [POST]
+  Parameters: {"commit"=>"Create", "producto"=>{"nombre"=>"", "descripcion"=>"", "precio"=>""}, "authenticity_token"=>"lhHwmvqrRDmaD6ncC0wuDTrOU+ZUx2CHUA/ao4BqIAM="}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mProducto Load (0.2ms)[0m   [0mSELECT "productos".id FROM "productos" WHERE ("productos"."nombre" = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering productos/new
+Completed in 164ms (View: 34, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:40:00) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 57ms (View: 43, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:43:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Completed in 56ms (View: 24, DB: 1) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:43:27) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 41, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-04 17:45:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Rendered productos/_forma (5.0ms)
+Completed in 66ms (View: 33, DB: 1) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:45:12) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 42, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:48:26) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 56ms (View: 42, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-04 17:55:30) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 149ms (View: 135, DB: 2) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProductos (20100128234730)
+Migrating to CreateUsers (20100129004525)
+Migrating to CreateCategorias (20100205002956)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "categorias" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100205002956')[0m
+Migrating to AddCategoriaToProducto (20100205003138)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: producto: ALTER TABLE "producto" ADD "categoria_id" integer[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProductos (20100128234730)
+Migrating to CreateUsers (20100129004525)
+Migrating to CreateCategorias (20100205002956)
+Migrating to AddCategoriaToProducto (20100205003138)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "productos" ADD "categoria_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100205003138')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categorias")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("productos")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCategoria Create (0.8ms)[0m   [0;1mINSERT INTO "categorias" ("created_at", "nombre", "updated_at") VALUES('2010-02-05 00:46:41', 'Chocolate', '2010-02-05 00:46:41')[0m
+  [4;35;1mProducto Load (1.0ms)[0m   [0mSELECT * FROM "productos" LIMIT 1[0m
+  [4;36;1mProducto Load (0.3ms)[0m   [0;1mSELECT "productos".id FROM "productos" WHERE ("productos"."nombre" = 'ejemplo' AND "productos".id <> 1) LIMIT 1[0m
+  [4;35;1mProducto Update (0.4ms)[0m   [0mUPDATE "productos" SET "updated_at" = '2010-02-05 00:48:01', "categoria_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mCategoria Load (1.0ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:27:47) [GET]
+  [4;36;1mProducto Load (2.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 305ms (View: 256, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:28:02) [GET]
+  [4;35;1mCategoria Load (14.9ms)[0m   [0mSELECT * FROM "categorias" [0m
+Rendering template within layouts/categorias
+Rendering categorias/index
+Completed in 145ms (View: 59, DB: 15) | 200 OK [http://localhost/categorias]
+  [4;36;1mProducto Load (0.9ms)[0m   [0;1mSELECT * FROM "productos" LIMIT 1[0m
+  [4;35;1mCategoria Load (0.5ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+  [4;36;1mProducto Load (0.9ms)[0m   [0;1mSELECT * FROM "productos" ORDER BY productos.id DESC LIMIT 1[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:29:28) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mCategoria Create (64.2ms)[0m   [0mINSERT INTO "categorias" ("created_at", "nombre", "updated_at") VALUES('2010-02-09 23:30:42', 'Bebidas', '2010-02-09 23:30:42')[0m
+  [4;36;1mCategoria Load (0.8ms)[0m   [0;1mSELECT * FROM "categorias" ORDER BY categorias.id DESC LIMIT 1[0m
+  [4;35;1mProducto Load (0.4ms)[0m   [0mSELECT "productos".id FROM "productos" WHERE ("productos"."nombre" = 'Colchon' AND "productos".id <> 2) LIMIT 1[0m
+  [4;36;1mProducto Update (0.8ms)[0m   [0;1mUPDATE "productos" SET "updated_at" = '2010-02-09 23:32:34', "categoria_id" = 2 WHERE "id" = 2[0m
+  [4;35;1mProducto Load (0.4ms)[0m   [0mSELECT "productos".id FROM "productos" WHERE ("productos"."nombre" = 'ejemplo' AND "productos".id <> 1) LIMIT 1[0m
+  [4;36;1mProducto Update (0.8ms)[0m   [0;1mUPDATE "productos" SET "updated_at" = '2010-02-09 23:39:02', "categoria_id" = 2 WHERE "id" = 1[0m
+  [4;35;1mCategoria Load (0.8ms)[0m   [0mSELECT * FROM "categorias" ORDER BY categorias.id DESC LIMIT 1[0m
+  [4;36;1mCategoria Load (0.8ms)[0m   [0;1mSELECT * FROM "categorias" ORDER BY categorias.id DESC LIMIT 1[0m
+  [4;35;1mProducto Load (1.3ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos".categoria_id = 2) [0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:41:42) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:41:47) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/categorias
+Rendering categorias/index
+Completed in 35ms (View: 20, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:41:55) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:42:32) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/categorias
+Rendering categorias/index
+Completed in 35ms (View: 20, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:42:35) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:42:38) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/categorias
+Rendering categorias/index
+Completed in 34ms (View: 19, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:42:40) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:43:53) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 35ms (View: 20, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:43:56) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:43:58) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 131ms (View: 21, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:44:00) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:44:04) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 36ms (View: 20, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:44:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+Completed in 65ms (View: 48, DB: 0) | 200 OK [http://localhost/categorias/1]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:44:08) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:44:13) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 121ms (View: 106, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:44:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Load (0.6ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 69ms (View: 51, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:44:23) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:44:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Load (0.6ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+Completed in 23ms (View: 6, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:46:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.6ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 42ms (View: 24, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:46:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 42ms (View: 24, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:47:20) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:47:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 35ms (View: 17, DB: 1) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:47:26) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:47:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 137ms (View: 119, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:47:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 42ms (View: 25, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:48:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 43ms (View: 25, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:48:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 43ms (View: 25, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:48:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 44ms (View: 25, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:48:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 43ms (View: 25, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:49:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.6ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 43ms (View: 25, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:49:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 44ms (View: 27, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:49:27) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:49:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 35ms (View: 17, DB: 1) | 200 OK [http://localhost/productos/2]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:49:32) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:49:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.5ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 128ms (View: 17, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:49:48) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:49:54) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 36ms (View: 20, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:49:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+Completed in 22ms (View: 6, DB: 0) | 200 OK [http://localhost/categorias/1]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:51:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategoria Load (0.4ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/categorias/1]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:56:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;36;1mProducto Load (0.3ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos".categoria_id = 1) [0m
+Completed in 39ms (View: 22, DB: 1) | 200 OK [http://localhost/categorias/1]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:56:06) [GET]
+  [4;35;1mCategoria Load (0.9ms)[0m   [0mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:56:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategoria Load (0.4ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;35;1mProducto Load (0.8ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos".categoria_id = 2) [0m
+Completed in 36ms (View: 19, DB: 1) | 200 OK [http://localhost/categorias/2]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:56:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategoria Load (0.4ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;35;1mProducto Load (0.9ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos".categoria_id = 2) [0m
+Completed in 50ms (View: 32, DB: 1) | 200 OK [http://localhost/categorias/2]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:58:40) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 34ms (View: 20, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:58:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;36;1mProducto Load (0.9ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos".categoria_id = 2) [0m
+Completed in 49ms (View: 32, DB: 1) | 200 OK [http://localhost/categorias/2]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:58:42) [GET]
+  [4;35;1mCategoria Load (0.9ms)[0m   [0mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:58:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategoria Load (0.4ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;35;1mProducto Load (0.3ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos".categoria_id = 1) [0m
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://localhost/categorias/1]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:58:45) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 130ms (View: 115, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:58:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategoria Load (0.4ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;36;1mProducto Load (0.8ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos".categoria_id = 2) [0m
+Completed in 42ms (View: 24, DB: 1) | 200 OK [http://localhost/categorias/2]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 17:58:48) [GET]
+  [4;35;1mCategoria Load (0.9ms)[0m   [0mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 36ms (View: 21, DB: 1) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2010-02-09 17:58:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategoria Load (0.4ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering categorias/show
+  [4;35;1mProducto Load (0.3ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos".categoria_id = 1) [0m
+Completed in 31ms (View: 14, DB: 1) | 200 OK [http://localhost/categorias/1]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 17:58:55) [GET]
+  [4;36;1mProducto Load (1.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 17:58:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProducto Load (0.6ms)[0m   [0mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;36;1mCategoria Load (0.5ms)[0m   [0;1mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+Completed in 127ms (View: 17, DB: 1) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-09 17:59:07) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/productos/1/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-09 17:59:07) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-09 17:59:10) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cp3kCWsDlBwyu0cbdMeuNOJsRUntNWFIp/kN0WJHW2A=", "login"=>"ismael.marin@gmail.com", "password"=>"igmc180581"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'ismael.marin@gmail.com') LIMIT 1[0m
+Failed login for 'ismael.marin@gmail.com' from 127.0.0.1 at Tue Feb 09 23:59:10 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 31ms (View: 6, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-09 17:59:18) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"cp3kCWsDlBwyu0cbdMeuNOJsRUntNWFIp/kN0WJHW2A=", "login"=>"igmarin", "password"=>"ismael"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'igmarin') LIMIT 1[0m
+Redirected to http://localhost:3000/productos/1/edit
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-09 17:59:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+Rendered productos/_forma (30.8ms)
+Completed in 220ms (View: 185, DB: 1) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-09 18:04:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mProducto Load (0.6ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+  [4;35;1mCategoria Load (0.7ms)[0m   [0mSELECT * FROM "categorias" [0m
+Rendered productos/_forma (18.3ms)
+Completed in 74ms (View: 38, DB: 2) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:04:39) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 59ms (View: 43, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2010-02-09 18:04:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/show
+  [4;35;1mCategoria Load (0.5ms)[0m   [0mSELECT * FROM "categorias" WHERE ("categorias"."id" = 2) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 153ms (View: 38, DB: 2) | 200 OK [http://localhost/productos/1]
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2010-02-09 18:04:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mProducto Load (0.5ms)[0m   [0;1mSELECT * FROM "productos" WHERE ("productos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering productos/edit
+  [4;35;1mCategoria Load (0.6ms)[0m   [0mSELECT * FROM "categorias" [0m
+Rendered productos/_forma (16.3ms)
+Completed in 66ms (View: 30, DB: 2) | 200 OK [http://localhost/productos/1/edit]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:04:49) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 59ms (View: 43, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:17:43) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 165ms (View: 149, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:17:46) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 59ms (View: 43, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 18:17:51) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 58ms (View: 42, DB: 2) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:17:53) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 61ms (View: 45, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:17:58) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 60ms (View: 45, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 18:17:59) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 57ms (View: 42, DB: 2) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:18:00) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 59ms (View: 44, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 18:18:01) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 149ms (View: 134, DB: 2) | 200 OK [http://localhost/categorias]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-09 18:18:03) [GET]
+  [4;36;1mCategoria Load (0.9ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 57ms (View: 41, DB: 2) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:18:04) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 60ms (View: 44, DB: 2) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-09 18:56:11) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-11 17:22:45) [GET]
+  [4;36;1mProducto Load (2.0ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 292ms (View: 232, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-11 17:23:02) [GET]
+  Parameters: {"title"=>"Noticias sobre el mundo del mercado forex de Amero-fx"}
+
+ActionController::RoutingError (No route matches "/noticias/feed" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-11 17:24:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 120ms (View: 114, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-11 17:24:05) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2010-02-11 17:24:06) [GET]
+  [4;36;1mCategoria Load (1.6ms)[0m   [0;1mSELECT * FROM "categorias" [0m
+Rendering template within layouts/application
+Rendering categorias/index
+Completed in 126ms (View: 55, DB: 2) | 200 OK [http://localhost/categorias]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-11 17:24:09) [GET]
+  [4;35;1mProducto Load (1.1ms)[0m   [0mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/productos]
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2010-02-11 17:24:12) [GET]
+  [4;36;1mProducto Load (1.1ms)[0m   [0;1mSELECT * FROM "productos" [0m
+Rendering template within layouts/application
+Rendering productos/index
+Completed in 122ms (View: 11, DB: 1) | 200 OK [http://localhost/]

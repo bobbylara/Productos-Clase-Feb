@@ -12,13 +12,25 @@
     <td><%=h producto.nombre %></td>
     <td><%=h producto.precio %></td>
     <td><%=h producto.descripcion %></td>
+	
     <td><%= link_to 'Show', producto %></td>
+<% if logged_in? %>
     <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
     <td><%= link_to 'Destroy', producto, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
+
   </tr>
 <% end %>
 </table>
 
 <br />
+<% if logged_in? %>
+	<%= link_to 'New producto', new_producto_path %>
+<% end %>
 
-<%= link_to 'New producto', new_producto_path %>
+
+
+
+
+
+

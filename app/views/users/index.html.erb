@@ -1,0 +1,15 @@
+<h1>Lista de usuarios:</h1>
+
+<ul>
+<% if !@users.blank? %>
+  <% for user in @users %>
+    <li>
+	<%= user.login %> - <%= user.email %> - 
+<%= link_to 'Borrar', user, :confirm => "Quieres borrar al usuario?", :method => :delete %>
+	</li>
+  <% end %>
+<% else %>
+  <p>No hay ning&uacute;n usuario registrado.</p>
+<% end %>
+</ul>
+<br />

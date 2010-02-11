@@ -1,0 +1,17 @@
+<p>
+  <%= f.label :nombre %><br />
+  <%= f.text_field :nombre %>
+</p>
+<p>
+  <%= f.label :precio %><br />
+  <%= f.text_field :precio %>
+</p>
+<p>
+  <%= f.label :descripcion %><br />
+  <%= f.text_area :descripcion %>
+</p>
+<p>
+  Categoría<br />
+  <%= f.collection_select :categoria_id, Categoria.all, :id, :nombre, {:include_blank => true} %>
+
+</p>

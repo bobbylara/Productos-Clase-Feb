@@ -1,0 +1,18 @@
+<h1>Editando la info del usuario.</h1>
+
+<%= error_messages_for :user %>
+<% form_for(@user) do |f| -%>
+<p><%= label_tag 'login' %><br/>
+<%= f.text_field :login %></p>
+
+<p><%= label_tag 'email' %><br/>
+<%= f.text_field :email %></p>
+
+<p><%= label_tag 'password' %><br/>
+<%= f.password_field :password %></p>
+
+<p><%= label_tag 'password_confirmation', 'Confirmar Password' %><br/>
+<%= f.password_field :password_confirmation %></p>
+
+<p><%= submit_tag 'Actualizar' %></p>
+<% end -%>

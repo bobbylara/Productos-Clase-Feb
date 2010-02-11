@@ -1,0 +1,17 @@
+<h2><%= @categoria.nombre %></h2>
+
+<% if !@categoria.productos.blank? %>
+<ul>
+  <% for producto in @categoria.productos %>
+    <li>
+	Nombre: <%= producto.nombre %> - <%= number_to_currency(producto.precio) %>
+	</li>
+  <% end %>
+</ul>
+<% else %>
+  <h3>No hay productos registrados.</h3>
+<% end %>
+
+
+<%= link_to 'Edit', edit_categoria_path(@categoria) %> |
+<%= link_to 'Back', categorias_path %>

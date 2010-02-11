@@ -1,6 +1,7 @@
 class ProductosController < ApplicationController
-  # GET /productos
-  # GET /productos.xml
+  before_filter :login_required, :except => [:show, :index] 
+  before_filter :busca_producto, :except => [:index, :create, :new]
+  
   def index
     @productos = Producto.all
 
@@ -10,19 +11,13 @@ class ProductosController < ApplicationController
     end
   end
 
-  # GET /productos/1
-  # GET /productos/1.xml
   def show
-    @producto = Producto.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @producto }
     end
   end
 
-  # GET /productos/new
-  # GET /productos/new.xml
   def new
     @producto = Producto.new
 
@@ -32,13 +27,9 @@ class ProductosController < ApplicationController
     end
   end
 
-  # GET /productos/1/edit
   def edit
-    @producto = Producto.find(params[:id])
   end
 
-  # POST /productos
-  # POST /productos.xml
   def create
     @producto = Producto.new(params[:producto])
 
@@ -54,11 +45,7 @@ class ProductosController < ApplicationController
     end
   end
 
-  # PUT /productos/1
-  # PUT /productos/1.xml
   def update
-    @producto = Producto.find(params[:id])
-
     respond_to do |format|
       if @producto.update_attributes(params[:producto])
         flash[:notice] = 'Producto was successfully updated.'
@@ -71,15 +58,16 @@ class ProductosController < ApplicationController
     end
   end
 
-  # DELETE /productos/1
-  # DELETE /productos/1.xml
   def destroy
-    @producto = Producto.find(params[:id])
     @producto.destroy
-
     respond_to do |format|
       format.html { redirect_to(productos_url) }
       format.xml  { head :ok }
     end
   end
+  
+  def busca_producto
+    @producto = Producto.find(params[:id])
+  end
+  
 end
